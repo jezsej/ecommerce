@@ -7,6 +7,14 @@ const { login, register, logout, failureRedirect } = require('../controllers/aut
 
 
 
+passport.serializeUser((user, done) => {
+    done(null, user)
+})
+
+passport.deserializeUser((user, done) => {
+    done(null, user)
+})
+
 passport.use(new LocalStrategy((username, password, done) => {
 
 
